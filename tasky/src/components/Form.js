@@ -6,19 +6,28 @@ const AddTaskForm = (props) => {
         <div>
             <form onSubmit={props.submit}>
                 <label>
-                    Task title:
+                    <p>Task title:</p>
                     <input type="text" name="title" required onChange={(event) => props.change(event)} />
                 </label>
                 <br />
                 <label>
-                    Due date:
+                    <p>Due date:</p>
                     <input type="date" name="deadline" required onChange={(event) => props.change(event)} />
                 </label>
                 <br />
                 <label>
-                    Details:
-                    <input type="text" name="description" onChange={(event) => props.change(event)} />
+                    <p>Details:</p>
+                    <input type="text" name="description" required onChange={(event) => props.change(event)} />
                 </label>
+                <label>
+                    <p>Priority:</p>
+                    <select id="priority" name="priority" onChange={(event) => props.change(event)}>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </label>
+                <p></p>
                 <input type="submit" value="Submit" />
             </form>
         </div>

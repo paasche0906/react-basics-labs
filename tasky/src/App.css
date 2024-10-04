@@ -44,6 +44,10 @@ div {
   font-size: 1em;
 }
 
+.priority {
+  font-weight:bolder;
+}
+
 button {
   border: none;
   border-radius: 3px;
